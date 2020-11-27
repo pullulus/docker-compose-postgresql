@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  postgres:
+    image: library/postgres:12-alpine
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./data:/var/lib/postgresql
+    environment:
+      - POSTGRES_PASSWORD=mysecretpassword
